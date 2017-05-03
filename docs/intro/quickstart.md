@@ -11,7 +11,7 @@
 
 ```
 $ npm i flclover-init -g
-$ egg-init flclover-example --type=simple
+$ flclover-init flclover-example --type=simple
 $ cd flclover-example
 $ npm i
 ```

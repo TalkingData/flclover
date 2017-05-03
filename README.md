@@ -2,7 +2,9 @@ Flclover（Four leaf clover）
 =======
 
 [![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
 
+[download-image]: https://img.shields.io/npm/dm/flclover.svg?style=flat-square
 [download-url]: https://npmjs.org/package/flclover
 
 Build better enterprise frameworks and apps with Node.js &amp; Koa2

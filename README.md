@@ -1,6 +1,6 @@
 Flclover
 =======
-Four leaf clover
+Four leaf clover🍀
 
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]

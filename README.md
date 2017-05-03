@@ -1,5 +1,6 @@
-Flclover（Four leaf clover）
+Flclover
 =======
+（Four leaf clover）
 
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]

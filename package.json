@@ -1,7 +1,7 @@
 {
   "name": "flclover",
-  "version": "0.0.8",
-  "description": "build better enterprise frameworks and apps with Node.js & Koa2",
+  "version": "0.0.10",
+  "description": "Build better enterprise frameworks and apps with Node.js & Koa2",
   "keywords": [
     "web",
     "app",
@@ -32,6 +32,10 @@
     "power-assert": "^1.4.2",
     "intelli-espower-loader": "^1.0.1",
     "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "changelog": "./node_modules/conventional-changelog-cli/cli.js -p angular -i changelog.md -o changelog.md"
   },
   "main": "index.js",
   "files": [

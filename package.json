@@ -42,13 +42,13 @@
     "lib",
     "index.js"
   ],
-  "homepage": "https://github.com/flcloverjs/flclover",
+  "homepage": "https://github.com/talkingdata/flclover",
   "engines": {
     "node": ">= 7.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:flcloverjs/flclover.git"
+    "url": "git@github.com:TalkingData/flclover.git"
   },
   "license": "MIT"
 }

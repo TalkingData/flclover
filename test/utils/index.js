@@ -35,4 +35,21 @@ describe('test/utils/index.js', () => {
       assert(result === null);
     });
   });
+  describe('existsModule', () => {
+    const baseDir = path.join(__dirname, '../fixtures/existsmodule');
+    it('should throw an error when the module is not found', () => {
+      assert.throws(() => {
+        utils.loadFile(path.join(baseDir, 'not_fount'));
+      }, /Cannot find module/);
+    });
+    it('should be false when not exist the "not_fount" module', () => {
+      assert(!utils.existsModule(path.join(baseDir, 'not_fount')));
+    });
+    it('should be true when exists the json module', () => {
+      assert(utils.existsModule(path.join(baseDir, 'module')));
+    });
+    it('should be true when exists the indexmodule module', () => {
+      assert(utils.existsModule(path.join(baseDir, 'index_module')));
+    });
+  });
 });

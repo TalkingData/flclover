@@ -45,6 +45,9 @@ describe('test/utils/index.js', () => {
     it('should be false when not exist the "not_fount" module', () => {
       assert(!utils.existsModule(path.join(baseDir, 'not_fount')));
     });
+    // it('should be false when not exist the "router" module', () => {
+    //   assert(!utils.existsModule(path.join(baseDir, 'router')));
+    // });
     it('should be true when exists the json module', () => {
       assert(utils.existsModule(path.join(baseDir, 'module')));
     });

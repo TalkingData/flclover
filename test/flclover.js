@@ -56,4 +56,19 @@ describe('test/flclover.js', () => {
       }, /controller is not a directory/);
     });
   });
+
+  describe('router', () => {
+    const app = Flclover({
+      baseDir: `${__dirname}/fixtures/router`,
+    });
+    it('middlewares should includes the router middleware', () => {
+      assert.equal(app.middleware[app.middleware.length - 1].name, 'allowedMethods');
+    });
+    it('should response home', (done) => {
+      request.agent(app.listen())
+      .get('/')
+      .expect(200)
+      .expect(/home/, done);
+    });
+  });
 });

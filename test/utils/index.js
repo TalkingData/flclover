@@ -42,7 +42,7 @@ describe('test/utils/index.js', () => {
         utils.loadFile(path.join(baseDir, 'not_fount'));
       }, /Cannot find module/);
     });
-    it('should be false when not exist the "not_fount" module', () => {
+    it('should be false when not exist the \'not_fount\' module', () => {
       assert(!utils.existsModule(path.join(baseDir, 'not_fount')));
     });
     // it('should be false when not exist the "router" module', () => {

@@ -84,7 +84,7 @@ describe('test/flclover.js', () => {
       assert(controllers.includes('home'));
       assert(controllers.includes('detail'));
     });
-    it('should response home', (done) => {
+    it('should response home with \'async\' api', (done) => {
       request.agent(app.listen())
       .get('/')
       .expect(200)

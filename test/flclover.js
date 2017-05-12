@@ -60,9 +60,29 @@ describe('test/flclover.js', () => {
   describe('router', () => {
     const app = Flclover({
       baseDir: `${__dirname}/fixtures/router`,
+      devLog: false,
     });
     it('middlewares should includes the router middleware', () => {
       assert.equal(app.middleware[app.middleware.length - 1].name, 'allowedMethods');
+    });
+    it('should response home', (done) => {
+      request.agent(app.listen())
+      .get('/')
+      .expect(200)
+      .expect(/home/, done);
+    });
+  });
+
+  describe('controller', () => {
+    const app = Flclover({
+      baseDir: `${__dirname}/fixtures/controller`,
+      devLog: false,
+    });
+    it('controllers should includes home and detail', () => {
+      const controllers = Object.keys(app.context.controller);
+      assert(controllers.length === 2);
+      assert(controllers.includes('home'));
+      assert(controllers.includes('detail'));
     });
     it('should response home', (done) => {
       request.agent(app.listen())

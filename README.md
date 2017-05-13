@@ -16,15 +16,18 @@ Four leaf clover🍀
 Build better enterprise frameworks and apps with Node.js &amp; Koa2
 
 ## Hello, Flclover!
+
+* app/router.js
+
 ```javascript
-// app/router.js
 module.exports = (router, controller) => {
   router.get('/', controller.home.index);
 };
 ```
 
+* app/controller/home.js
+
 ```javascript
-// app/controller/home.js
 exports.index = async (ctx) => {
   ctx.body = 'Hello, Flclover!';
 };
@@ -55,3 +58,16 @@ $ npm i
 $ npm run dev
 $ open localhost:7001
 ```
+
+## Running tests
+
+```
+$ npm test
+```
+
+## Community
+
+ - [Examples](https://github.com/talkingdata/flclover-examples)
+
+## License
+  MIT

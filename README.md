@@ -15,8 +15,24 @@ Four leaf clover🍀
 
 Build better enterprise frameworks and apps with Node.js &amp; Koa2
 
+## Hello, Flclover!
+```javascript
+// app/router.js
+module.exports = (router, controller) => {
+  router.get('/', controller.home.index);
+};
+```
+
+```javascript
+// app/controller/home.js
+exports.index = async (ctx) => {
+  ctx.body = 'Hello, Flclover!';
+};
+```
+
 ## 目标
-* 测试覆盖率100%
+* 单元测试覆盖率100%
+* 简单、稳定、易扩展的企业级Node Web框架
 
 ## 环境准备
 * 操作系统：支持 macOS，Linux，Windows

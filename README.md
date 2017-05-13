@@ -45,7 +45,7 @@ exports.index = async (ctx) => {
 
 通过脚手架快速生成项目:
 
-```
+```bash
 $ npm i flclover-init -g
 $ flclover-init flclover-example --type=simple
 $ cd flclover-example
@@ -54,14 +54,14 @@ $ npm i
 
 启动项目:
 
-```
+```bash
 $ npm run dev
 $ open localhost:7001
 ```
 
 ## Running tests
 
-```
+```bash
 $ npm test
 ```
 

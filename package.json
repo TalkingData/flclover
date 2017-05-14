@@ -35,7 +35,7 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "test": "istanbul cover _mocha --recursive",
     "changelog": "./node_modules/conventional-changelog-cli/cli.js -p angular -i changelog.md -o changelog.md"
   },
   "main": "index.js",

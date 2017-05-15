@@ -91,4 +91,22 @@ describe('test/flclover.js', () => {
       .expect(/home/, done);
     });
   });
+
+  describe('middleware', () => {
+    it('should throws Cannot find module', () => {
+      assert.throws(() => {
+        Flclover({
+          baseDir: `${__dirname}/fixtures/no_middleware`,
+          devLog: false,
+        });
+      }, /Cannot find module/);
+    });
+    it('should includes the middleware test', () => {
+      const app = Flclover({
+        baseDir: `${__dirname}/fixtures/middleware`,
+        devLog: false,
+      });
+      assert(app.middleware[0].name === 'test');
+    });
+  });
 });

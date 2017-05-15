@@ -101,11 +101,11 @@ describe('test/flclover.js', () => {
         });
       }, /Cannot find module/);
     });
+    const app = Flclover({
+      baseDir: `${__dirname}/fixtures/middleware`,
+      devLog: false,
+    });
     it('should includes the middleware test', () => {
-      const app = Flclover({
-        baseDir: `${__dirname}/fixtures/middleware`,
-        devLog: false,
-      });
       assert(app.middleware[0].name === 'test');
     });
   });

@@ -1,7 +1,7 @@
 {
   "name": "flclover",
-  "version": "0.0.7",
-  "description": "build better enterprise frameworks and apps with Node.js & Koa2",
+  "version": "0.7.3",
+  "description": "Build better enterprise frameworks and apps with Node.js & Koa2",
   "keywords": [
     "web",
     "app",
@@ -13,11 +13,14 @@
     "flclover"
   ],
   "dependencies": {
+    "assert": "^1.4.1",
+    "egg-logger": "^1.5.0",
+    "flclover-proxy": "0.0.1",
+    "is-type-of": "^1.0.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^2.0.1",
-    "koa-router": "^7.1.1",
-    "egg-logger": "^1.5.0"
+    "koa-router": "^7.1.1"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^1.3.1",
@@ -31,18 +34,22 @@
     "intelli-espower-loader": "^1.0.1",
     "supertest": "^3.0.0"
   },
+  "scripts": {
+    "test": "istanbul cover _mocha --recursive",
+    "changelog": "./node_modules/conventional-changelog-cli/cli.js -p angular -i changelog.md -o changelog.md"
+  },
   "main": "index.js",
   "files": [
     "lib",
     "index.js"
   ],
-  "homepage": "https://github.com/flcloverjs/flclover",
+  "homepage": "https://github.com/talkingdata/flclover",
   "engines": {
     "node": ">= 7.6.0"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:flcloverjs/flclover.git"
+    "url": "git@github.com:TalkingData/flclover.git"
   },
   "license": "MIT"
 }

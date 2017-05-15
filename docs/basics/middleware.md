@@ -1,5 +1,5 @@
 # Middleware 中间件
-Feather 是基于 Koa 2.x 实现的，所以 Feather 的中间件形式和 Koa 2 的中间件形式是一样的，都是基于 async function 的洋葱圈模型。每次我们编写一个中间件，就相当于在洋葱外面包了一层。
+Flclover 是基于 Koa 2.x 实现的，所以 Flclover 的中间件形式和 Koa 2 的中间件形式是一样的，都是基于 async function 的洋葱圈模型。每次我们编写一个中间件，就相当于在洋葱外面包了一层。
 
 ## 编写中间件
 我们先来通过编写一个简单的 gzip 中间件，来看看中间件的写法。

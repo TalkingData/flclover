@@ -15,18 +15,37 @@ Four leaf clover🍀
 
 Build better enterprise frameworks and apps with Node.js &amp; Koa2
 
+## Hello, Flclover!
+
+* app/router.js
+
+```javascript
+module.exports = (router, controller) => {
+  router.get('/', controller.home.index);
+};
+```
+
+* app/controller/home.js
+
+```javascript
+exports.index = async (ctx) => {
+  ctx.body = 'Hello, Flclover!';
+};
+```
+
 ## 目标
-* 测试覆盖率100%
+* 代码覆盖率100%
+* 简单、稳定、易扩展的企业级Node Web框架
 
 ## 环境准备
 * 操作系统：支持 macOS，Linux，Windows
-* 运行环境：建议选择 LTS 版本，最低要求 7.6
+* 运行环境：建议选择 Node Current 版本，最低要求 7.6
 
 ## 快速初始化
 
 通过脚手架快速生成项目:
 
-```
+```bash
 $ npm i flclover-init -g
 $ flclover-init flclover-example --type=simple
 $ cd flclover-example
@@ -35,7 +54,20 @@ $ npm i
 
 启动项目:
 
-```
+```bash
 $ npm run dev
 $ open localhost:7001
 ```
+
+## Running tests
+
+```bash
+$ npm test
+```
+
+## Community
+
+ - [Examples](https://github.com/talkingdata/flclover-examples)
+
+## License
+  MIT

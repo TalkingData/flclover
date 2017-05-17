@@ -1,5 +1,5 @@
 const request = require('supertest');
-const assert = require('assert');
+const assert = require('power-assert');
 const Flclover = require('../');
 
 describe('test/flclover.js', () => {
@@ -14,7 +14,7 @@ describe('test/flclover.js', () => {
       });
 
       app.on('error', (err) => {
-        assert.equal(err.message, 'boom');
+        assert(err.message === 'boom');
         done();
       });
 
@@ -29,7 +29,7 @@ describe('test/flclover.js', () => {
         baseDir: `${__dirname}/fixtures/demo`,
       });
       process.env.NODE_ENV = NODE_ENV;
-      assert.equal(app.env, 'development');
+      assert(app.env === 'development');
     });
   });
 
@@ -63,7 +63,7 @@ describe('test/flclover.js', () => {
       devLog: false,
     });
     it('middlewares should includes the router middleware', () => {
-      assert.equal(app.middleware[app.middleware.length - 1].name, 'allowedMethods');
+      assert(app.middleware[app.middleware.length - 1].name === 'allowedMethods');
     });
     it('should response home', (done) => {
       request.agent(app.listen())

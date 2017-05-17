@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert = require('power-assert');
 const Flclover = require('../..');
 const request = require('supertest');
 const fs = require('fs');

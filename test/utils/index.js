@@ -1,5 +1,5 @@
 const utils = require('../../lib/utils');
-const assert = require('assert');
+const assert = require('power-assert');
 const path = require('path');
 
 describe('test/utils/index.js', () => {

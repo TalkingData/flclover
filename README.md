@@ -5,6 +5,7 @@ Four leaf clover🍀
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 [![node version][node-image]][node-url]
+[![codecov](https://codecov.io/gh/TalkingData/flclover/branch/master/graph/badge.svg)](https://codecov.io/gh/TalkingData/flclover)
 
 [npm-image]: https://img.shields.io/npm/v/flclover.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/flclover

@@ -39,7 +39,7 @@ exports.index = async (ctx) => {
 
 ## 环境准备
 * 操作系统：支持 macOS，Linux，Windows
-* 运行环境：建议选择 Node Current 版本，最低要求 7.6
+* 运行环境：Node版本建议选择 Current 版，最低要求 7.6
 
 ## 快速初始化
 

@@ -5,7 +5,7 @@ Four leaf clover🍀
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 [![node version][node-image]][node-url]
-[![codecov](https://codecov.io/gh/TalkingData/flclover/branch/master/graph/badge.svg)](https://codecov.io/gh/TalkingData/flclover)
+[![Test coverage][codecov-image]][codecov-url]
 
 [npm-image]: https://img.shields.io/npm/v/flclover.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/flclover
@@ -13,6 +13,8 @@ Four leaf clover🍀
 [download-url]: https://npmjs.org/package/flclover
 [node-image]: https://img.shields.io/badge/node.js-%3E=_7.6.0-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
+[codecov-image]: https://img.shields.io/codecov/c/github/TalkingData/flclover.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/TalkingData/flclover
 
 Build better enterprise frameworks and apps with Node.js &amp; Koa2
 

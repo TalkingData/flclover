@@ -7,6 +7,7 @@ const path = require('path');
 describe('test/middleware/logger.js', () => {
   const baseDir = `${process.cwd()}/test/fixtures/logger`;
   const logPath = path.join(`${baseDir}/logs`, 'app.log');
+  const errorLogPath = path.join(`${baseDir}/logs`, 'error.log');
   const app = Flclover({ baseDir });
 
   describe('ctx.logger.info', () => {
@@ -26,11 +27,11 @@ describe('test/middleware/logger.js', () => {
       .get('/error')
       .end(() => {});
     it('should includes Error Stack', () => {
-      const content = fs.readFileSync(logPath, 'utf8');
+      const content = fs.readFileSync(errorLogPath, 'utf8');
       assert(content.match(/controller\/home\.js:7:14/));
     });
     it('should includes Error boom', () => {
-      const content = fs.readFileSync(logPath, 'utf8');
+      const content = fs.readFileSync(errorLogPath, 'utf8');
       assert(content.match(/Error: boom/));
     });
   });

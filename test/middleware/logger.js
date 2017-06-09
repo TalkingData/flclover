@@ -3,6 +3,7 @@ const Flclover = require('../..');
 const request = require('supertest');
 const fs = require('fs');
 const path = require('path');
+const sleep = require('ko-sleep');
 
 describe('test/middleware/logger.js', () => {
   const baseDir = `${process.cwd()}/test/fixtures/logger`;
@@ -14,10 +15,12 @@ describe('test/middleware/logger.js', () => {
     request(app.listen())
       .get('/')
       .end(() => {});
-    it('should exists file app.log', () => {
+    it('should exists file app.log', async () => {
+      await sleep('1s');
       assert(fs.existsSync(logPath));
     });
-    it('should includes home index in log file', () => {
+    it('should includes home index in log file', async () => {
+      await sleep('1s');
       const content = fs.readFileSync(logPath, 'utf8');
       assert(content.match(/home index\n/));
     });
@@ -26,11 +29,13 @@ describe('test/middleware/logger.js', () => {
     request(app.listen())
       .get('/error')
       .end(() => {});
-    it('should includes Error Stack', () => {
+    it('should includes Error Stack', async () => {
+      await sleep('1s');
       const content = fs.readFileSync(errorLogPath, 'utf8');
       assert(content.match(/controller\/home\.js:7:14/));
     });
-    it('should includes Error boom', () => {
+    it('should includes Error boom', async () => {
+      await sleep('1s');
       const content = fs.readFileSync(errorLogPath, 'utf8');
       assert(content.match(/Error: boom/));
     });
@@ -48,7 +53,8 @@ describe('test/middleware/logger.js', () => {
     request(app.listen())
       .get('/debug')
       .end(() => {});
-    it('should not includes debug msg', () => {
+    it('should not includes debug msg', async () => {
+      await sleep('1s');
       const content = fs.readFileSync(logPath, 'utf8');
       // level: 'INFO',
       assert(content.match(/debug msg\n/) === null);

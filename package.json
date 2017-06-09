@@ -1,6 +1,6 @@
 {
   "name": "flclover",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "description": "Build better enterprise frameworks and apps with Node.js & Koa2",
   "keywords": [
     "web",
@@ -23,15 +23,16 @@
     "koa-router": "^7.1.1"
   },
   "devDependencies": {
-    "conventional-changelog-cli": "^1.3.1",
     "babel-eslint": "^7.2.1",
+    "conventional-changelog-cli": "^1.3.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
+    "intelli-espower-loader": "^1.0.1",
     "istanbul": "^1.1.0-alpha.1",
+    "ko-sleep": "^1.0.3",
     "mocha": "^3.3.0",
     "power-assert": "^1.4.2",
-    "intelli-espower-loader": "^1.0.1",
     "supertest": "^3.0.0"
   },
   "scripts": {

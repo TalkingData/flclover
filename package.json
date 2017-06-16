@@ -1,6 +1,6 @@
 {
   "name": "flclover",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Build better enterprise frameworks and apps with Node.js & Koa2",
   "keywords": [
     "web",

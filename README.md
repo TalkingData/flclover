@@ -36,17 +36,15 @@ exports.index = async (ctx) => {
 };
 ```
 
-## 目标
-* 代码覆盖率100%
-* 简单、稳定、易扩展的企业级Node Web框架
+## target
+* Coverage 100%
+* Simple, stable and extensible enterprise Node Web framework.
 
-## 环境准备
-* 操作系统：支持 macOS，Linux，Windows
-* 运行环境：Node版本建议选择 Current 版，最低要求 7.6
+## Installation
+* macOS，Linux，Windows
+* Koa requires node v7.6.0 or higher for ES2015 and async function support.
 
-## 快速初始化
-
-通过脚手架快速生成项目:
+Quick start:
 
 ```bash
 $ npm i flclover-init -g
@@ -55,7 +53,7 @@ $ cd flclover-example
 $ npm i
 ```
 
-启动项目:
+Run:
 
 ```bash
 $ npm run dev

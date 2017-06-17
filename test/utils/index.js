@@ -55,4 +55,18 @@ describe('test/utils/index.js', () => {
       assert(utils.existsModule(path.join(baseDir, 'index_module')));
     });
   });
+  describe('camelize', () => {
+    it('camelize get-user-list to getUserList', () => {
+      assert(utils.camelize('get-user-list') === 'getUserList');
+    });
+    it('camelize get_user_list to getUserList', () => {
+      assert(utils.camelize('get_user_list') === 'getUserList');
+    });
+    it('camelize nothing to do', () => {
+      assert(utils.camelize('getUserList') === 'getUserList');
+    });
+    it('camelize nothing to do', () => {
+      assert(utils.camelize('getuserlist') === 'getuserlist');
+    });
+  });
 });

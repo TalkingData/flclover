@@ -112,7 +112,7 @@ describe('test/application.js', () => {
     });
     app.start();
     it('controllers should includes home and detail', () => {
-      const controllers = Object.keys(app.context.controller);
+      const controllers = Object.keys(app.controller);
       assert(controllers.length === 2);
       assert(controllers.includes('home'));
       assert(controllers.includes('detail'));

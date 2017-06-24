@@ -32,7 +32,7 @@ describe('test/middleware/logger.js', () => {
     it('should includes Error Stack', async () => {
       await sleep('1s');
       const content = fs.readFileSync(errorLogPath, 'utf8');
-      assert(content.match(/controller\/home\.js:7:14/));
+      assert(content.match(/controller\/home\.js/));
     });
     it('should includes Error boom', async () => {
       await sleep('1s');

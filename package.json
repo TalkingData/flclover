@@ -1,6 +1,6 @@
 {
   "name": "flclover",
-  "version": "0.7.10",
+  "version": "0.7.12",
   "description": "Build better enterprise frameworks and apps with Node.js & Koa2",
   "keywords": [
     "web",
@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "assert": "^1.4.1",
+    "debug": "^2.6.8",
     "egg-logger": "^1.6.0",
     "flclover-proxy": "0.0.1",
     "koa": "^2.3.0",

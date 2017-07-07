@@ -30,14 +30,14 @@
     "eslint-plugin-import": "^2.2.0",
     "intelli-espower-loader": "^1.0.1",
     "is-type-of": "^1.0.0",
-    "istanbul": "^1.1.0-alpha.1",
     "ko-sleep": "^1.0.3",
     "mocha": "^3.3.0",
+    "nyc": "^11.0.3",
     "power-assert": "^1.4.2",
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test istanbul cover _mocha -- --recursive --require intelli-espower-loader",
+    "test": "NODE_ENV=test ./node_modules/.bin/nyc ./node_modules/.bin/mocha --recursive --require intelli-espower-loader",
     "changelog": "./node_modules/conventional-changelog-cli/cli.js -p angular -i changelog.md -o changelog.md"
   },
   "main": "index.js",

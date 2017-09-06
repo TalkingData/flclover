@@ -131,7 +131,7 @@ describe('test/application.js', () => {
         (new Application({
           baseDir: `${__dirname}/fixtures/no_middleware`,
         })).start();
-      }, /Cannot find module/);
+      }, /Cannot find middleware/);
     });
     const app = new Application({
       baseDir: `${__dirname}/fixtures/middleware`,

@@ -17,11 +17,12 @@
     "debug": "^2.6.8",
     "egg-logger": "^1.6.0",
     "flclover-proxy": "0.0.1",
+    "is-type-of": "^1.2.0",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^2.0.1",
     "koa-router": "^7.1.1",
-    "is-type-of": "^1.2.0"
+    "log4js": "^2.3.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",

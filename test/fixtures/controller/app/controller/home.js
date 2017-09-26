@@ -3,5 +3,7 @@ const getHome = () => new Promise((resolve) => {
 });
 
 exports.index = async (ctx) => {
+  ctx.logger.info('hahaha');
+  ctx.logger.error(new Error('error msg'));
   ctx.body = await getHome();
 };

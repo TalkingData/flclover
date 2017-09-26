@@ -32,7 +32,7 @@ describe('test/middleware/logger.js', () => {
     it('should includes Error Stack', async () => {
       await sleep('1s');
       const content = fs.readFileSync(errorLogPath, 'utf8');
-      assert(content.match(/controller\/home\.js/));
+      assert(content.match(/app\/controller\/home\.js/));
     });
     it('should includes Error boom', async () => {
       await sleep('1s');
@@ -53,11 +53,11 @@ describe('test/middleware/logger.js', () => {
     request(app.listen())
       .get('/debug')
       .end(() => {});
-    it('should not includes debug msg', async () => {
+    it('should includes debug msg', async () => {
       await sleep('1s');
       const content = fs.readFileSync(logPath, 'utf8');
       // level: 'INFO',
-      assert(content.match(/debug msg\n/) === null);
+      assert(content.match(/debug msg\n/));
     });
   });
 });
